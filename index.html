@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/app.js" defer></script>
+    <script src="./js/main.js" defer></script>
 
-    <title>Magic 8 Ball</title>
+    <title>Name Age</title>
 </head>
+
 <body>
-    
+    <form>
+        <h1>Average Age of Your Name</h1>
+        <p>Enter your name and get the average age of someone with your name. Made using <a href="https://agify.io/" target="_blank">agify.io</a>.</p>
+        <label>Your name: </label>
+        <input type="text" name="name-input" id="name-input">
+        <button type="submit" name="submit-bttn" id="submit-bttn">Submit</button>
+        <p id="error-el"></p>
+    </form>
+
+    <div id="output">
+
+    </div>
+
 </body>
+
 </html>
