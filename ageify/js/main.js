@@ -6,6 +6,7 @@ const button = document.querySelector('#submit-bttn');
 const errEl = document.querySelector('#error-el');
 const results = [];
 
+// returns json of request w/ name tacked on the end
 const getAge = (uName) => {
   console.log(SERVER_URL + uName.toLowerCase().trim());
    return fetch(SERVER_URL + uName)
@@ -15,6 +16,7 @@ const getAge = (uName) => {
      });
 };
 
+// takes the data and if it is valid, capitalizes the first letter and adds it to the front of the results arr
 const populateResultsArr = (data) => {
   if (data.age !== null) {
     const uName = data.name.charAt(0).toUpperCase() + data.name.slice(1);
@@ -29,6 +31,7 @@ const populateResultsArr = (data) => {
   return results;
 };
 
+// adds the contents of the results arr to the output div. makes the most recent one largest
 const displayAge = (results = []) => {
   output.innerHTML = '';
   return results.forEach((r) => {
@@ -38,6 +41,7 @@ const displayAge = (results = []) => {
   });
 };
 
+// makes sure the input has valid cahracters
 const confirmInput = (value) => {
   const pattern = /[\W\d\s]/;
   if (!pattern.test(value)) {
